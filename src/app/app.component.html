@@ -1,0 +1,108 @@
+<div class="container">
+  <app-header></app-header>
+  <div
+    *ngIf="isNotificationOn && notification !== null"
+    [ngClass]="{
+      'alert alert-dismissible fade show': true,
+      'alert-danger': notification.getType() === 'error',
+      'alert-success': notification.getType() === 'success'
+    }"
+    role="alert"
+  >
+    <strong>{{ notification.getType() }}!</strong>
+    {{ notification.getMessage() }}
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="alert"
+      aria-label="Close"
+      (click)="hideNotification()"
+    ></button>
+  </div>
+</div>
+
+<div class="container">
+  <button
+    class="btn btn-primary mb-3"
+    data-bs-target="#exampleModal"
+    data-bs-toggle="modal"
+  >
+    Add a Pokemon
+  </button>
+</div>
+
+<div class="container">
+  <div class="row" *ngIf="allPokemons.length === 0; else table">
+    No Pokemon to Display
+  </div>
+</div>
+
+<ng-template #table>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4 mb-3" *ngFor="let pokemon of allPokemons">
+        <app-pokemon-card [pokemon]="pokemon"></app-pokemon-card>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Pokemon</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <form [formGroup]="addPokemonForm" class="d-flex flex-column">
+            <input
+              class="mb-2 rounded-sm text-center"
+              type="number"
+              placeholder="Pokemon Id"
+              formControlName="id"
+            />
+            <input
+              class="mb-2 rounded-sm text-center"
+              type="text"
+              placeholder="Pokemon Name"
+              formControlName="name"
+            />
+            <input
+              class="mb-2 rounded-sm text-center"
+              type="text"
+              placeholder="Pokemon Power"
+              formControlName="power"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="addPokemon()"
+        >
+          Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

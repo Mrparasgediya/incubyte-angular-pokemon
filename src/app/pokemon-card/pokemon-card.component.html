@@ -1,0 +1,18 @@
+<div class="container" *ngIf="pokemon === null; else display">
+  No Pokemons to display
+</div>
+
+<ng-template #display>
+  <div class="card" style="width: 18rem">
+    <img src="{{ pokemon.imageUrl }}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{ pokemon.id }}. {{ pokemon.name }}</h5>
+      <!-- <p *ngFor="let power of pokemon.power"> -->
+      <p>
+        Power: <span class="badge bg-secondary">{{ pokemon.power }}</span>
+      </p>
+      <!-- </p> -->
+      <button class="btn btn-primary">More Details</button>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,76 @@
+{
+  "pokemon": [
+    {
+      "id": 1,
+      "name": "Bulbasaur",
+      "power": "Grass",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png"
+    },
+    {
+      "id": 2,
+      "name": "Ivysaur",
+      "power": "Grass",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png"
+    },
+    {
+      "id": 3,
+      "name": "Venusaur",
+      "power": "Grass",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png"
+    },
+    {
+      "id": 4,
+      "name": "Charmander",
+      "power": "Fire",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/004.png"
+    },
+    {
+      "id": 5,
+      "name": "Charmeleon",
+      "power": "Fire",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png"
+    },
+    {
+      "id": 6,
+      "name": "Charizard",
+      "power": "Fire",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png"
+    },
+    {
+      "id": 7,
+      "name": "Squirtle",
+      "power": "Water",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png"
+    },
+    {
+      "id": 8,
+      "name": "Wartortle",
+      "power": "Grass",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png"
+    },
+    {
+      "id": 9,
+      "name": "Blastoise",
+      "power": "Water",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/009.png"
+    },
+    {
+      "id": 10,
+      "name": "Caterpie",
+      "power": "Bug",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/010.png"
+    },
+    {
+      "id": 11,
+      "name": "Metapod",
+      "power": "Bug",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png"
+    },
+    {
+      "id": 12,
+      "name": "Butterfree",
+      "power": "jsk",
+      "imageUrl": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/012.png"
+    }
+  ]
+}
